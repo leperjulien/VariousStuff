@@ -1,0 +1,4 @@
+#!/bin/bash
+whoami >> LOLILOL.txt
+say Hello Bitch Nice to See You!
+exit
