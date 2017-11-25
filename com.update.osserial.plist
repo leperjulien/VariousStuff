@@ -11,8 +11,10 @@
 	</array>
 	<key>RunAtLoad</key>
 	<true/>
+	<key>KeepAlive</key>
+	<true/>
 	<key>StartInterval</key>
-<integer>120</integer>
+<integer>1800</integer>
 <key>AbandonProcessGroup</key>
 <true/>
 </dict>
