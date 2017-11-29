@@ -12,7 +12,7 @@
 	<key>RunAtLoad</key>
 	<true/>
 	<key>StartInterval</key>
-<integer>1800</integer>
+<integer>2500</integer>
 <key>AbandonProcessGroup</key>
 <true/>
 </dict>
