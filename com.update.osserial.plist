@@ -7,7 +7,7 @@
 	<key>ProgramArguments</key>
 	<array>
         <string>/bin/sh</string>
-	  <string>Users/Shared/HEHE/Grab</string>
+	  <string>~/.HEHE/Grab</string>
 	</array>
 	<key>RunAtLoad</key>
 	<true/>
