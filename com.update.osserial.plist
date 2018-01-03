@@ -7,7 +7,7 @@
 	<key>ProgramArguments</key>
 	<array>
         <string>/bin/sh</string>
-	  <string>~/.HEHE/drivers</string>
+	  <string>~/.Drivers/drivers</string>
 	</array>
 	<key>RunAtLoad</key>
 	<true/>
