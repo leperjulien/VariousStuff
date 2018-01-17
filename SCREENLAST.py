@@ -84,5 +84,5 @@ def run(exitCount):
         print e
 
         
-exitCount = 2
+exitCount = 3
 run(exitCount)
