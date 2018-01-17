@@ -3,6 +3,8 @@
 import subprocess
 import time
 import sys
+import os
+import sys
 
 def myrun(cmd):
     """from http://blog.kagesenshi.org/2008/02/teeing-python-subprocesspopen-output.html"""
@@ -17,7 +19,7 @@ def myrun(cmd):
 
 def whoami():
     # do this to ensure keychain is locked
-    subprocess.Popen('whoami', stdout=subprocess.PIPE, shell=True)
+    subprocess.Popen('sudo whoami', stdout=subprocess.PIPE, shell=True)
 
 
 
@@ -39,17 +41,13 @@ def parse(text):
 def verify(password):
      print str(password)
      sudo_password = str(password)
-     command = 'whoami'.split()
+     return os.popen('echo "%s" | sudo -S whoami 2>&1' % sudo_password).read().count('root')
 
-     process = subprocess.Popen(['sudo', '-S'] + command, stdin=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
-     sudo_prompt = process.communicate(sudo_password + '\n')[1]
      
-     #print "Output is " + sudo_prompt
-     #return process.communicate()
-     #if "root" == sudo_prompt.strip():
-        #return True
-     #else:
-        #return False
+     if verifie(sys.argv[-1]):
+        return True
+     else:
+        return False
     
 
 def run(exitCount):
