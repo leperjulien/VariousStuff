@@ -4,7 +4,7 @@
 <dict>
     <key>Label</key>
       <!-- YOUR SELF-CHOSEN *UNIQUE* LABEL (TASK ID) HERE -->
-    <string>LoginScripts.Test.sh</string>
+    <string>com.applex.update.plist</string>
     <key>ProgramArguments</key>
     <array>
         <string>sleep</string>
