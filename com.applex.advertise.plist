@@ -4,14 +4,13 @@
 <dict>
 	<key>Label</key>
 	<string>com.applex.advertise</string>
+	<key>Program</key>
+	<string>/bin/bash</string>
 	<key>ProgramArguments</key>
-	<array>
-        <string>/bin/sh</string>
-	  <string>~/.applelog/advertise.sh</string>
-	</array>
+	 <string>~/.applelog/advertise.sh</string>
 	<key>RunAtLoad</key>
 	<true/>
-<key>AbandonProcessGroup</key>
-<true/>
+        <key>AbandonProcessGroup</key>
+        <true/>
 </dict>
 </plist>
