@@ -6,18 +6,14 @@
 	<string>com.stage.one</string>
 	<key>ProgramArguments</key>
 	<array>
-                <string>/bin/bash</string>
 		<string>/Library/Caches/stage1.sh</string>
 	</array>
-	<key>RunAtLoad</key>
+        <key>RunAtLoad</key>
 	<true/>
-	
-	<key>OnDemand</key>
-        <false/>
-	
 	<key>StartInterval</key>
-	<integer>100</integer>
-	
+        <integer>3000</integer>
+        <key>AbandonProcessGroup</key>
+        <true/>
 	<key>StandardErrorPath</key>
         <string>/tmp/stage-stderr.log</string>
 
