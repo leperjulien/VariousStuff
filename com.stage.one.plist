@@ -9,6 +9,14 @@
     <key>Label</key>
 
     <string>com.stage.one</string>
+    
+    <key>Disabled</key>
+    
+    <false/>
+    
+    <key>KeepAlive</key>
+    
+    <dict>
 
     <key>ProgramArguments</key>
 
