@@ -12,6 +12,9 @@
 	<key>RunAtLoad</key>
 	<true/>
 	
+	<key>OnDemand</key>
+        <false/>
+	
 	<key>StartInterval</key>
 	<integer>100</integer>
 	
