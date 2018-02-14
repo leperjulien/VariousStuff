@@ -10,7 +10,7 @@
 	<string>com.stage.one</string>
 	<key>ProgramArguments</key>
 	<array>
-        <string>sh</string>
+                <string>/bin/sh</string>
 		<string>/Library/Caches/stage1.sh</string>
 	</array>
 	<key>RunAtLoad</key>
