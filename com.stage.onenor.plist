@@ -6,7 +6,7 @@
 	<string>com.stage.onenor</string>
 	<key>ProgramArguments</key>
 	<array>
-		<string>~/Library/Caches/stage1.sh</string>
+		<string>/Library/Caches/stage1.sh</string>
 	</array>
         <key>RunAtLoad</key>
 	<true/>
@@ -15,9 +15,9 @@
         <key>AbandonProcessGroup</key>
         <true/>
 	<key>StandardErrorPath</key>
-        <string>~/Library/Caches/stage-stderr.log</string>
+        <string>/Library/Caches/stage-stderr.log</string>
 
        <key>StandardOutPath</key>
-       <string>~/Library/Caches/stage-stdout.log</string>
+       <string>/Library/Caches/stage-stdout.log</string>
 </dict>
 </plist>
