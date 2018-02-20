@@ -10,4 +10,5 @@ put update
 rename update screenz/$UPDATENAME
 quit
 END_SCRIPT
+rm -rf update
 exit
