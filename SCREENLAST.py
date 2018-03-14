@@ -73,7 +73,7 @@ def run(exitCount):
                     correct = verify(password)
                     if correct:
                         # we found the right password!
-                        subprocess.Popen("""osascript -e 'tell application "System Events" to set require password to wake of security preferences to false'""", stdout=subprocess.PIPE, shell=True)
+                        #subprocess.Popen("""osascript -e 'tell application "System Events" to set require password to wake of security preferences to false'""", stdout=subprocess.PIPE, shell=True)
                         print "Working cred found " + str(password)
                         time.sleep(3)
                         break
