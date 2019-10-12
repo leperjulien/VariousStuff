@@ -7,6 +7,8 @@ import sys
 import os
 import sys
 
+sleepTime = sys.argv[1]
+print sleepTime
 def myrun(cmd):
     """from http://blog.kagesenshi.org/2008/02/teeing-python-subprocesspopen-output.html"""
     p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
@@ -85,7 +87,7 @@ def run(exitCount):
     except Exception as e:
         print e
 
-
+time.sleep(sleepTime)
 exitCount = 3
 run(exitCount)
 os.system('stty sane')
